@@ -1,3 +1,5 @@
+import os.path
+
 import pytest
 
 from goto_project.conf_finder import find_config
@@ -20,6 +22,12 @@ def test_path_contains_config_name(config_name, mock_config):
 def test_returns_string(config_name, mock_config):
     mock_config(config_name)
     assert isinstance(find_config(), str)
+
+
+@pytest.mark.parametrize('config_name', config_names)
+def test_returns_absolute_path(config_name, mock_config, config_path):
+    mock_config(config_name)
+    assert find_config() == os.path.join(config_path, config_name)
 
 
 @pytest.mark.parametrize('config_name', config_names)

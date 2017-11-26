@@ -3,7 +3,7 @@ import shutil
 
 import pytest
 
-CONFIG_PATH = os.path.abspath(os.path.join('.', 'examples'))
+CONFIG_PATH = os.path.join('.', 'examples')
 
 
 class FSCleaner:
@@ -45,3 +45,8 @@ def mock_config(mocker):
     yield conf_mocker
 
     cleaner.clean()
+
+
+@pytest.fixture
+def config_path():
+    return os.path.abspath(CONFIG_PATH)

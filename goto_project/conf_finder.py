@@ -7,7 +7,7 @@ CONFIG_PATH = '~'
 
 
 def find_config() -> str:
-    conf_path = os.path.join(CONFIG_PATH, CONFIG_NAME)
-    if not os.path.exists(conf_path):
+    conf_path = os.path.abspath(os.path.join(CONFIG_PATH, CONFIG_NAME))
+    if not os.path.isfile(conf_path):
         raise ConfigNotFound(f'"{conf_path}" can not be found.')
     return conf_path
