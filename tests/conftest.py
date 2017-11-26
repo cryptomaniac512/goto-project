@@ -32,15 +32,15 @@ def mock_config(mocker):
     cleaner = FSCleaner()
     cleaner(CONFIG_PATH)
 
-    def conf_mocker(config_name: str):
-        mocker.patch('goto_project.conf_finder.CONFIG_PATH', CONFIG_PATH)
-        mocker.patch('goto_project.conf_finder.CONFIG_NAME', config_name)
+    def conf_mocker(name: str, content: str=''):
+        mocker.patch('goto_project.config_tools.CONFIG_PATH', CONFIG_PATH)
+        mocker.patch('goto_project.config_tools.CONFIG_NAME', name)
 
-        filepath = os.path.join(CONFIG_PATH, config_name)
+        filepath = os.path.join(CONFIG_PATH, name)
         os.makedirs(os.path.dirname(filepath), exist_ok=True)
 
-        with open(filepath, 'w'):
-            pass
+        with open(filepath, 'w') as f:
+            f.write(content)
 
     yield conf_mocker
 
