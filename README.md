@@ -34,7 +34,7 @@ To list all available projects call
 gt
 ```
 
-To open project call `gt` with project name as ergument
+To open project call `gt` with project name as argument
 
 ``` shell
 gt goto-project
