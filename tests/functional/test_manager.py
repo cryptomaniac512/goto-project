@@ -1,5 +1,3 @@
-import subprocess
-
 import pytest
 
 from goto_project.manager import Manager
@@ -48,10 +46,9 @@ def test_goto_project(config, project, call_args, mock_config, mocker):
         'goto_project.shell_tools.user_shell', return_value='shell-command')
 
     call = mocker.MagicMock()
-    subprocess.call = call
+    with mocker.patch('subprocess.call', call):
+        manager = Manager()
+        manager.open_project(project)
 
-    manager = Manager()
-    manager.open_project(project)
-
-    assert call.call_count == 1
-    assert call.call_args[0][0] == call_args
+        assert call.call_count == 1
+        assert call.call_args[0][0] == call_args

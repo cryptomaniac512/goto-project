@@ -34,7 +34,8 @@ def test_find_config_returns_abs_path(config_name, mock_config, config_path):
 
 
 @pytest.mark.parametrize('config_name', config_names)
-def test_find_config_raises_exception_if_config_does_not_exist(config_name):
+def test_find_config_raises_if_config_does_not_exist(config_name, mocker):
+    mocker.patch('goto_project.config_tools.CONFIG_NAME', config_name)
     with pytest.raises(ConfigNotFound):
         find_config()
 
