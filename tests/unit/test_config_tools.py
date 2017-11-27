@@ -6,7 +6,7 @@ from goto_project.config_tools import find_config, load_config
 from goto_project.exceptions import ConfigNotFound
 
 config_names = (
-    '.goto-project.yaml',
+    '.gotoproject.yaml',
     'projects.yml',
     '.my-projects',
 )
