@@ -1,0 +1,24 @@
+#!/usr/bin/env python
+import argparse
+
+from goto_project.goto import GotoProject
+
+
+def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        'project', nargs='?',
+        help='Project to open. List all available project if empty,')
+
+    parsed = parser.parse_args()
+    project = parsed.project
+
+    goto = GotoProject()
+    if not project:
+        print(goto.list())  # noqa
+    else:
+        goto.open(project)
+
+
+if __name__ == '__main__':
+    main()
