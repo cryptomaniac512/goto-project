@@ -1,5 +1,4 @@
 import os.path
-from collections import OrderedDict
 
 import yaml
 
@@ -16,37 +15,6 @@ def find_config() -> str:
     return conf_path
 
 
-def load_config() -> OrderedDict:
+def load_config() -> dict:
     with open(find_config(), 'r') as config:
-        return yaml.load(config, Loader=OrderedDictYAMLLoader)
-
-
-class OrderedDictYAMLLoader(yaml.Loader):
-    """YAML loader that loads mappings into ordered dictionaries.
-
-    Based on https://gist.github.com/enaeseth/844388
-
-    """
-
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-
-        for tag in ('tag:yaml.org,2002:map', 'tag:yaml.org,2002:omap'):
-            self.add_constructor(tag, self.__class__.construct_yaml_map)
-
-    def construct_yaml_map(self, node):
-        data = OrderedDict()
-        yield data
-        value = self.construct_mapping(node)
-        data.update(value)
-
-    def construct_mapping(self, node, deep=False):
-        self.flatten_mapping(node)
-
-        mapping = OrderedDict()
-        for key_node, value_node in node.value:
-            key = self.construct_object(key_node, deep=deep)
-            value = self.construct_object(value_node, deep=deep)
-            mapping[key] = value
-
-        return mapping
+        return yaml.load(config)

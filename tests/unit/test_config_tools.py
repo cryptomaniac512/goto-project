@@ -44,17 +44,14 @@ def test_find_config_raises_exception_if_config_does_not_exist(config_name):
 one: blah
 two: blah
 three: blah
-    """, ['one', 'two', 'three']),
+    """, {'one': 'blah', 'two': 'blah', 'three': 'blah'}),
     ("""
 9: blah
 7: blah
 5: blah
-    """, [9, 7, 5]),
+    """, {9: 'blah', 7: 'blah', 5: 'blah'}),
 ))
 def test_load_config_returns_ordered_dict(content, expected, mock_config):
     mock_config('.goto-project.yaml', content)
 
-    loaded = load_config()  # type: dict
-
-    for index, key in enumerate(loaded.keys()):
-        assert key == expected[index]
+    assert load_config() == expected
