@@ -11,11 +11,20 @@ This is a like `workon` for python, but more powerfull and not only for python.
 
 Installation
 ------------
-You can install it in your user-space with
+Install it in your user-space with
 
 ``` shell
 pip3 install goto-project --user  # or pip if python3 is your default interpreter
 ```
+
+You can install `zsh` completion with [antigen](https://github.com/zsh-users/antigen)
+
+``` shell
+antigen bundle cryptomaniac512/goto-project completions/zsh
+```
+Now type `gt `, then press <TAB> and you will see all available projects.
+
+If you have project names `awesome-project` you can type `gt aw`, press <TAB> and get `gt awesome-project`.
 
 Configuration and usage
 -----
