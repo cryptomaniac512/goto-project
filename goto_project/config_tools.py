@@ -5,7 +5,7 @@ import yaml
 from goto_project.exceptions import ConfigNotFound
 
 CONFIG_NAME = '.goto-project.yaml'
-CONFIG_PATH = '~'
+CONFIG_PATH = os.path.expanduser('~')
 
 
 def find_config() -> str:
