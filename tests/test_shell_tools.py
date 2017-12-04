@@ -60,10 +60,8 @@ echo "GreatestProjectOfAll" closed."""]),
 shell-command
 echo "awesome-project" closed."""]),
 ])
-def test_construct_expression(name, conf, expected, mocker):
-    mocker.patch(
-        'goto_project.shell_tools.user_shell', return_value='shell-command')
-
+@pytest.mark.usefixtures('mock_shell')
+def test_construct_expression(name, conf, expected):
     got = ExpressionConstructor.construct(name, conf)
 
     assert got == expected
