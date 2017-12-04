@@ -50,3 +50,9 @@ def mock_config(mocker):
 @pytest.fixture
 def config_path():
     return os.path.abspath(CONFIG_PATH)
+
+
+@pytest.fixture
+def mock_shell(mocker):
+    mocker.patch(
+        'goto_project.shell_tools.user_shell', return_value='shell-command')
