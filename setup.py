@@ -14,5 +14,5 @@ setup(
     scripts=['goto_project/gt'],
     setup_requires=['setuptools-markdown'],
     url="https://github.com/cryptomaniac512/goto-project",
-    version="0.0.2",
+    version="0.1.0",
 )
