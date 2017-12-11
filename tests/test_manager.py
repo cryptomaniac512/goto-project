@@ -82,7 +82,7 @@ def test_project_configuration(content, project, params, mock_config):
      """
 VimWithBlackjackAndHookers:
   path: ~/my-projects/vim-with-blackjack_and_hookers
-  clear_on_exit: true
+  clear_on_exit: false
   instructions:
     - source ~/Envs/vim-with-blackjack_and_hookers
     - export $PATH=$HOME/.local/bin:$PATH
@@ -94,7 +94,6 @@ source ~/Envs/vim-with-blackjack_and_hookers
 export $PATH=$HOME/.local/bin:$PATH
 vim
 shell-command
-clear
 echo "VimWithBlackjackAndHookers" closed."""]),
 
     ('yet-another-project',
@@ -111,6 +110,7 @@ yet-another-project:
 source ~/Envs/yet-another-project
 git status
 shell-command
+clear
 echo "yet-another-project" closed."""]),
 ])
 @pytest.mark.usefixtures('mock_shell')

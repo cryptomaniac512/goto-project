@@ -36,7 +36,7 @@ goto-project:  # this is a project name
   instructions:  # any instructions to call when you switch project
     - source ~/Devel/Envs/py3_goto-project/bin/activate
   command: vim  # command to run when project opened
-  clear_on_exit: true  # if specified then terminal output will be cleared on project close
+  clear_on_exit: false  # if specified as false then terminal output will not be cleared on project close
 ```
 
 To list all available projects call

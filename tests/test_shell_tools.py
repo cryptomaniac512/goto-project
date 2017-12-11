@@ -36,11 +36,12 @@ echo "VimWithBlackjackAndHookers" closed."""]),
 source ~/Envs/yet-another-project
 git status
 shell-command
+clear
 echo "yet-another-project" closed."""]),
 
     ('GreatestProjectOfAll', dict(
         path='~/my-projects/GreatestProjectOfAll',
-        clear_on_exit=True,
+        clear_on_exit=False,
         instructions=[
             'source ~/Envs/GreatestProjectOfAll',
             'find ./ -type f -name "*.pyc" -delete',
@@ -51,13 +52,13 @@ source ~/Envs/GreatestProjectOfAll
 find ./ -type f -name "*.pyc" -delete
 git status
 shell-command
-clear
 echo "GreatestProjectOfAll" closed."""]),
 
     ('awesome-project', dict(
         path='~/my-projects/awesome-project',
     ), ['shell-command', '-c', """cd ~/my-projects/awesome-project
 shell-command
+clear
 echo "awesome-project" closed."""]),
 ])
 @pytest.mark.usefixtures('mock_shell')

@@ -39,7 +39,7 @@ class ExpressionConstructor:
 
         expression.append(user_shell())
 
-        if self.project_conf.get('clear_on_exit') is True:
+        if self.project_conf.get('clear_on_exit', True) is not False:
             expression.append(self.expand_clear_on_exit())
 
         expression.append(self.on_close_message())
