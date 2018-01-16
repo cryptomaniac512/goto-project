@@ -8,6 +8,7 @@ This is a like `workon` for python, but more powerfull and not only for python.
 [![Coverage Status](https://coveralls.io/repos/github/cryptomaniac512/goto-project/badge.svg?branch=master)](https://coveralls.io/github/cryptomaniac512/goto-project?branch=master)
 ![Python versions](https://img.shields.io/badge/python-3.6-blue.svg)
 [![PyPi](https://img.shields.io/badge/PyPi-0.1.0-yellow.svg)](https://pypi.python.org/pypi/goto-project)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fcryptomaniac512%2Fgoto-project.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fcryptomaniac512%2Fgoto-project?ref=badge_shield)
 
 Installation
 ------------
@@ -77,3 +78,7 @@ Type `C-D` and now you in `~/`.
 Screencast
 ----------
 ...available [here](https://asciinema.org/a/149712)
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fcryptomaniac512%2Fgoto-project.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fcryptomaniac512%2Fgoto-project?ref=badge_large)
