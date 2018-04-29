@@ -4,10 +4,10 @@ Easy and fast project switching in your shell!
 
 This is a like `workon` for python, but more powerfull and not only for python.
 
-[![Build Status](https://travis-ci.org/cryptomaniac512/goto-project.svg?branch=master)](https://travis-ci.org/cryptomaniac512/goto-project)
-[![Coverage Status](https://coveralls.io/repos/github/cryptomaniac512/goto-project/badge.svg?branch=master)](https://coveralls.io/github/cryptomaniac512/goto-project?branch=master)
+[![Build Status](https://travis-ci.org/sivakov512/goto-project.svg?branch=master)](https://travis-ci.org/sivakov512/goto-project)
+[![Coverage Status](https://coveralls.io/repos/github/sivakov512/goto-project/badge.svg?branch=master)](https://coveralls.io/github/sivakov512/goto-project?branch=master)
 ![Python versions](https://img.shields.io/badge/python-3.6-blue.svg)
-[![PyPi](https://img.shields.io/badge/PyPi-0.1.0-yellow.svg)](https://pypi.python.org/pypi/goto-project)
+[![PyPi](https://img.shields.io/badge/PyPi-0.1.1-yellow.svg)](https://pypi.python.org/pypi/goto-project)
 
 Installation
 ------------
@@ -20,7 +20,7 @@ pip3 install goto-project --user  # or pip if python3 is your default interprete
 You can install `zsh` completion with [antigen](https://github.com/zsh-users/antigen)
 
 ``` shell
-antigen bundle cryptomaniac512/goto-project completions/zsh
+antigen bundle sivakov512/goto-project completions/zsh
 ```
 Now type `gt `, then press <TAB> and you will see all available projects.
 

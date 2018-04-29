@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     author="Nikita Sivakov",
-    author_email="cryptomaniac.512@gmail.com",
+    author_email="sivakov.512@gmail.com",
     description="Easy and fast project switching in your shell!",
     install_requires=['PyYAML'],
     keywords="project shell management",
@@ -13,6 +13,6 @@ setup(
     python_requires='>=3.6',
     scripts=['goto_project/gt'],
     setup_requires=['setuptools-markdown'],
-    url="https://github.com/cryptomaniac512/goto-project",
-    version="0.1.0",
+    url="https://github.com/sivakov512/goto-project",
+    version="0.1.1",
 )
