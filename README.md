@@ -4,8 +4,8 @@ Easy and fast project switching in your shell!
 
 This is a like `workon` for python, but more powerfull and not only for python.
 
-[![Build Status](https://travis-ci.org/sivakov512/goto-project.svg?branch=master)](https://travis-ci.org/sivakov512/goto-project)
-[![Coverage Status](https://coveralls.io/repos/github/sivakov512/goto-project/badge.svg?branch=master)](https://coveralls.io/github/sivakov512/goto-project?branch=master)
+[![Build Status](https://travis-ci.org/sivakov512/py-goto-project.svg?branch=master)](https://travis-ci.org/sivakov512/py-goto-project)
+[![Coverage Status](https://coveralls.io/repos/github/sivakov512/py-goto-project/badge.svg?branch=master)](https://coveralls.io/github/sivakov512/py-goto-project?branch=master)
 ![Python versions](https://img.shields.io/badge/python-3.6-blue.svg)
 [![PyPi](https://img.shields.io/badge/PyPi-0.1.1-yellow.svg)](https://pypi.python.org/pypi/goto-project)
 

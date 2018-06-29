@@ -13,6 +13,6 @@ setup(
     python_requires='>=3.6',
     scripts=['goto_project/gt'],
     setup_requires=['setuptools-markdown'],
-    url="https://github.com/sivakov512/goto-project",
-    version="0.1.1",
+    url="https://github.com/sivakov512/py-goto-project",
+    version="0.1.2",
 )
